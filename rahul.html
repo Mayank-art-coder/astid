@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astronomy Club | TCET</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b0f1a;
+      color: #ffffff;
+      line-height: 1.6;
+      text-align: center;
+      background: url("https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg") center center;
+      background-size: cover;
+      padding: 80px 20px;
+      animation: moveDown 5s linear infinite;
+    }
+
+    @keyframes moveDown {
+      0% { background-position: center top; }
+      100% { background-position: center bottom; }
+    }
+
+    @keyframes bounceColor {
+      0% { transform: translateY(0); color: #ffffff; }
+      25% { transform: translateY(-20px); color: #ffd700; }
+      50% { transform: translateY(10px); color: #00ffff; }
+      75% { transform: translateY(-10px); color: #ff69b4; }
+      100% { transform: translateY(0); color: #ffffff; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      padding: 10px 20px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      animation: bounceColor 3s ease-in-out forwards;
+    }
+
+    .header h3 {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .content {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      margin-top: 30px;
+    }
+
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .details {
+      padding: 10px;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+    }
+
+    .card {
+      background: #1d2736;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      display: inline-block;
+      width: 90%;
+      max-width: 350px;
+      margin-bottom: 40px;
+    }
+
+    .card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.3em;
+      color: #00e0ff;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 0.95em;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #111;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 1.5em;
+      }
+
+      .card img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .card h2 {
+        font-size: 1.1em;
+      }
+
+      .card p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>The Astronomy Club of TCET</h1>
+    <h3>Welcomes You !!</h3>
+  </header>
+
+  <div class="content">
+    <section class="image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSah20CcLYrB--jXHPjcxE1pV8cm8C1G-AsbA&s" alt="Astronomy Club Committee Image">
+    </section>
+
+    <section class="details">
+      <p>We are a community of stargazers, space enthusiasts, and explorers of the cosmos. Stay tuned for events, workshops, and stargazing nights!</p>
+    </section>
+
+    <section class="card">
+      <img src="data:image/jpeg;base64,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" alt="Mayank Upadhyay">
+      <h2>Ajmal Kasab</h2>
+      <p><strong>Role:</strong> Green club</p>
+      <p><strong>Session:</strong> 2025–2026</p>
+      <p><strong>Club:</strong> Astronomy Club</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Astronomy Club, TCET. All rights reserved.
+  </footer>
+
+</body>
+</html>
