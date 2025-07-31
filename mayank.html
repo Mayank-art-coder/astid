@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Astronomy Club ID - Mayank</title>
   <style>
-    body {
+    /* Reset and base */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
       background: url('background.jpeg') no-repeat center center fixed;
       background-size: cover;
@@ -19,52 +25,69 @@
     }
 
     .card {
-      background: rgba(29, 39, 54, 0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(29, 39, 54, 0.85);
+      backdrop-filter: blur(12px);
       border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      width: 100%;
       max-width: 360px;
-      padding: 25px;
+      padding: 25px 20px 30px;
+      position: relative;
       text-align: center;
-      box-sizing: border-box;
     }
 
     .logo {
-      width: 60px;
-      margin-bottom: 15px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 50px;
+      height: auto;
     }
 
     .profile-pic {
+      margin-top: 20px;
       border-radius: 50%;
       width: 110px;
       height: 110px;
       object-fit: cover;
-      margin-bottom: 12px;
       border: 3px solid #00e0ff;
     }
 
     h2 {
       font-size: 1.5em;
       color: #00e0ff;
-      margin: 10px 0 5px;
+      margin: 15px 0 10px;
     }
 
-    p {
-      margin: 6px 0;
+    .info {
       font-size: 1em;
+      text-align: left;
+      padding: 0 20px;
     }
 
-    p strong {
+    .info-row {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      color: #d3eaff;
+    }
+
+    .label {
+      font-weight: 600;
       color: #aad8ff;
-      display: inline-block;
-      min-width: 90px;
-      text-align: left;
     }
 
     @media (max-width: 400px) {
       .card {
         padding: 20px 15px;
+      }
+
+      .info {
+        padding: 0 10px;
+      }
+
+      .logo {
+        width: 40px;
       }
     }
   </style>
@@ -77,11 +100,24 @@
     <!-- Member Photo -->
     <img src="pic.jpeg" alt="Mayank's Photo" class="profile-pic" />
 
-    <!-- Member Details -->
+    <!-- Member Name -->
     <h2>Mayank Upadhyay</h2>
-    <p><strong>Role:</strong> Core Member – Event Manager</p>
-    <p><strong>Session:</strong> 2025–2026</p>
-    <p><strong>Club:</strong> Astronomy Club</p>
+
+    <!-- Member Details -->
+    <div class="info">
+      <div class="info-row">
+        <span class="label">Role:</span>
+        <span>Core Member – Event Manager</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Session:</span>
+        <span>2025–2026</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Club:</span>
+        <span>Astronomy Club</span>
+      </div>
+    </div>
   </div>
 </body>
 </html>
