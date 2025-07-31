@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Astronomy Club ID - Mayank</title>
   <style>
     body {
@@ -9,36 +10,50 @@
       background: #0b0f1a;
       color: #fff;
       text-align: center;
-      padding: 40px;
+      padding: 20px; /* reduced for mobile */
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .card {
       background: #1d2736;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.2);
-      display: inline-block;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      width: 90vw; /* responsive width */
       max-width: 350px;
+      box-sizing: border-box;
     }
     img {
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
+      width: 120px; /* slightly smaller for mobile */
+      height: 120px;
       object-fit: cover;
       margin-bottom: 15px;
     }
     h2 {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 1.4em;
       color: #00e0ff;
     }
     p {
-      margin: 5px 0;
+      margin: 8px 0; /* slightly more space for readability */
+      font-size: 1em;
+      line-height: 1.3;
+    }
+    /* Optional: make text wrap nicely on very small screens */
+    p strong {
+      display: inline-block;
+      min-width: 70px;
+      text-align: left;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="pic.jpeg" alt="Mayank's Photo">
+    <img src="pic.jpeg" alt="Mayank's Photo" />
     <h2>Mayank Upadhyay</h2>
     <p><strong>Role:</strong> Core Member – Event Manager</p>
     <p><strong>Session:</strong> 2025–2026</p>
